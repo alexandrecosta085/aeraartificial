@@ -1,0 +1,425 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Verdana", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fdfdfd;
+}
+
+/* Cabeçalho / Pagina Inicial */
+
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.bg-blur {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  background: url("img/1.jpg") no-repeat center center/cover;
+  filter: blur(8px);
+  z-index: 1;
+}
+
+.bg-blur::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.header-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.book-cover {
+  margin-top: 20px;
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.book-cover:hover {
+  transform: scale(1.1);
+}
+
+.book-subtitle {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.book-description {
+  text-align: justify;
+  font-size: 1rem;
+  margin-top: 20px;
+  width: 60%;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  max-width: 200px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 50px auto 0;
+  padding: 12px 25px;
+  background: #6b1d5c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #3f0736;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* Primeira Seção */
+
+.book-info {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.book-info h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.book-info p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Segunda Seção */
+
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  padding-top: 40px;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
+  margin: 20px;
+}
+
+.book-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.book-details li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.author-info {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+  margin: 20px;
+}
+
+.author-info img {
+  max-width: 200px;
+  border-radius: 10px;
+  margin: 15px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.author-info img:hover {
+  transform: scale(1.1);
+}
+
+.author-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Terceira Seção */
+
+.book-scene {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 40px;
+  text-align: justify;
+  padding-top: 40px;
+  border-top: 1px solid #ddd;
+}
+
+.book-scene a {
+  margin-bottom: 40px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  text-align: center;
+  padding: 40px 20px;
+  background: #f0f0f0;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer a {
+  display: inline-flex;
+  color: #6b1d5c;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+footer a:hover {
+  color: #3f0736;
+  transform: translateY(-5px);
+}
+
+footer i {
+  margin-right: 8px;
+  font-size: 1.5rem;
+}
+
+/* Telas Menores */
+
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .book-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .book-description {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .author-info {
+    border-left: none;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .book-details,
+  .author-info {
+    width: 100%;
+    padding-bottom: 10px;
+    margin: 0;
+  }
+
+  .book-scene {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .book-cover {
+    width: 150px;
+  }
+
+  .btn {
+    max-width: 60%;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 15px;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  footer a {
+    font-size: 1.3rem;
+    margin: 5px;
+  }
+
+  footer i {
+    margin-right: 6px;
+  }
+}
+
+/* Telas Pequenas */
+
+@media (max-width: 425px) {
+  .header-content h1 {
+    font-size: 1.8rem;
+    margin-top: 10px;
+  }
+
+  .book-subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .book-description {
+    width: 95%;
+    font-size: 0.95rem;
+  }
+
+  .book-cover {
+    width: 130px;
+    margin-top: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+
+  .book-info h3,
+  .subtitle {
+    font-size: 1.4rem;
+  }
+
+  .book-info p,
+  .book-details li,
+  .author-info p,
+  .book-scene p {
+    font-size: 0.95rem;
+  }
+
+  .details {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  .book-details,
+  .author-info {
+    width: 100%;
+    padding: 0;
+    margin: 15px 0;
+    border-left: none;
+  }
+
+  .book-scene {
+    width: 95%;
+    font-size: 0.95rem;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 8px;
+    padding: 25px 10px;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+    margin: 5px 0;
+  }
+
+  footer a {
+    font-size: 1.2rem;
+  }
+
+  footer i {
+    margin-right: 5px;
+  }
+}
