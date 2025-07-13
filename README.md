@@ -8,7 +8,7 @@ Landing page fictícia criada para promover o livro de ficção científica **"A
 
 Este projeto tem como objetivo demonstrar habilidades em desenvolvimento front-end, com foco em design responsivo, estrutura semântica e boas práticas de HTML5 e CSS3.
 
-A página apresenta informações sobre o livro, detalhes do autor, e um botão de compra redirecionando para a Amazon (link fictício usado como exemplo).
+A página apresenta informações sobre o livro, detalhes do autor, e um botão de compra redirecionando para a Amazon.
 
 ## 🛠️ Tecnologias Utilizadas
 
